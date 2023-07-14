@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://views/habits/H.gd" type="Script" id=1]
+[ext_resource path="res://views/habits/HCheckBox.gd" type="Script" id=2]
+[ext_resource path="res://views/habits/Hname.gd" type="Script" id=3]
+[ext_resource path="res://views/habits/HTimeText.gd" type="Script" id=4]
+[ext_resource path="res://data/HR.gd" type="Script" id=5]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 5 )
+nome = "AMOGKOK"
+time = {
+"H": 30,
+"M": 20
+}
+done = true
+path = "res://Resources/H/H1.tres"
+last_check = {
+"day": 0,
+"month": 0,
+"year": 0
+}
+
+[node name="H" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 100, 120 )
+rect_scale = Vector2( 1.00339, 1.03279 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+DATA = SubResource( 1 )
+
+[node name="Panel" type="ColorRect" parent="."]
+rect_min_size = Vector2( 120, 100 )
+color = Color( 0.256028, 0.188877, 0.261719, 1 )
+
+[node name="nome" type="Label" parent="Panel"]
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.4
+anchor_bottom = 0.205
+text = "LOREM"
+script = ExtResource( 3 )
+DATA = SubResource( 1 )
+
+[node name="done" type="CheckBox" parent="Panel"]
+anchor_left = 0.6
+anchor_top = -0.3
+anchor_right = 0.6
+anchor_bottom = -0.3
+margin_left = -61.0
+margin_top = 65.0
+margin_right = -37.0
+margin_bottom = 89.0
+align = 1
+icon_align = 1
+script = ExtResource( 2 )
+DATA = SubResource( 1 )
+
+[node name="tempo" type="Label" parent="Panel"]
+margin_left = 6.0
+margin_top = 59.0
+margin_right = 56.0
+margin_bottom = 73.0
+text = "Tempo: 99 : 99"
+script = ExtResource( 4 )
+DATA = SubResource( 1 )
+
+[connection signal="pressed" from="Panel/done" to="Panel/done" method="_on_CheckBox_pressed"]

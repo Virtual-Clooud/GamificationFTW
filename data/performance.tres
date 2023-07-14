@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://data/pointsRes.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+habit = {
+"bullseye": 0.0,
+"earlybird": 10.0,
+"latenever": 0.0,
+"points": 354
+}
+task = {
+"bullseye": 0.0,
+"earlybird": 0.0,
+"latenever": 0.0,
+"points": 300
+}

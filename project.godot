@@ -1,0 +1,70 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Resource",
+"class": "FILECRUD",
+"language": "GDScript",
+"path": "res://modules/FileCRUD.gd"
+}, {
+"base": "Resource",
+"class": "HR",
+"language": "GDScript",
+"path": "res://data/HR.gd"
+}, {
+"base": "OptionButton",
+"class": "OptionButtonFTW",
+"language": "GDScript",
+"path": "res://modules/OptionButtonFTW.gd"
+}, {
+"base": "Resource",
+"class": "PointsRes",
+"language": "GDScript",
+"path": "res://data/pointsRes.gd"
+}, {
+"base": "Resource",
+"class": "SCENECRUD",
+"language": "GDScript",
+"path": "res://modules/SceneCRUD.gd"
+}, {
+"base": "Resource",
+"class": "TR",
+"language": "GDScript",
+"path": "res://data/TR.gd"
+} ]
+_global_script_class_icons={
+"FILECRUD": "",
+"HR": "",
+"OptionButtonFTW": "",
+"PointsRes": "",
+"SCENECRUD": "",
+"TR": ""
+}
+
+[application]
+
+config/name="Gamification Ftw"
+run/main_scene="res://Master.tscn"
+config/icon="res://icon.png"
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+environment/default_environment="res://default_env.tres"
